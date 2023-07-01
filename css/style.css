@@ -64,6 +64,13 @@ nav img{
     font-size: 32px;
     color: #fff;
 }
+.textbox .fa-solid{
+    color: #f44336;
+    font-size: 80px;
+    margin: 0 25px;
+    cursor: pointer;
+    padding: 8px 0;
+}
 .herobtn{
     display: inline-block;
     text-decoration: none;

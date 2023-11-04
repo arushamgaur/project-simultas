@@ -620,12 +620,21 @@ h3{
     }
 
     .row1-m{
-        margin-left: 15%;
-        margin-top: 5%;
+        margin-right: 20%;
+        margin-left: 20%;
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 2%;
+    }
+    .row2-m{
+        margin-right: 20%;
+        margin-left: 20%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: -20%;
     }
 
     iframe{

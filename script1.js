@@ -41,7 +41,8 @@ const signIn = () => {
     const password = document.getElementById("sipassword").value;
 	firebase.auth().signInWithEmailAndPassword(email, password)
   .then((result) => {
-    document.write("You are Signed In");
+    // document.write("You are Signed In");
+    window.location.href = "home.html";
 	console.log(result);
   })
   .catch((error) => {
@@ -50,3 +51,20 @@ const signIn = () => {
   });
 
 };
+
+// JavaScript for handling the form submission
+document.getElementById("siemail").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting traditionally
+
+  // Get the entered username and password
+  const email = document.getElementById("siemail").value;
+  const password = document.getElementById("sipassword").value;
+
+  // Perform client-side validation (You should do server-side validation for security)
+  if (email === "your_valid_username" && password === "your_valid_password") {
+      // Redirect to the desired page
+      window.location.href = "home.html";
+  } else {
+      alert("Invalid credentials. Please try again.");
+  }
+});

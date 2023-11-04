@@ -1,106 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>sImultas</title>
+	<title>How to Design Login & Registration Form Transition</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img src="image/yourdost-mascot.png"></a>
-            <div class="navlinks">
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="feature.html">FEATURES</a></li>                    
-                    <li><a href="contactus.html">CONTACT US</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="textbox">
-            <h1>s<i class="fa-solid fa-i"></i>multas</h1>
-            <p>WITH TOGETHERNESS WE CAN KILL LONELINESS</p>
-            <a href="feature.html" class="herobtn">EXPLORE</a>
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>Sign In</h2>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" id="siemail">
+      </label>
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" id="sipassword">
+      </label>
+      <button type="button" class="submit" id="submit-btn" onclick="signIn()"><a href="home.html"></a>Sign In</button>
+      <p class="forgot-pass">Forgot Password ?</p>
+
+      <div class="social-media">
+        <ul>
+          <li><img src="images/facebook.png"></li>
+          <li><img src="images/twitter.png"></li>
+          <li><img src="images/linkedin.png"></li>
+          <li><img src="images/instagram.png"></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Sign up and discover great amount of new opportunities!</p>
         </div>
-    </section>
-    <section class="course">
-        <h1>WHAT WE OFFER</h1>
-        <div class="row">
-            <div class="coursecol card1">
-                <h3>BLOGS</h3>
-            </div>
-            <div class="coursecol card2">
-                <h3>BOOKS RECOMMENDATION</h3>
-            </div>
-            <div class="coursecol card3">
-                <h3>QUESTIONNAIRE</h3>
-            </div>
-            <div class="coursecol card4">
-                <h3>COUNSELLOR RECOMMENDATION</h3>
-            </div>
-            <!-- <div class="coursecol card5">
-                <h3>MUSIC RECOMMENDATION</h3>
-            </div> -->
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just sign in. We've missed you!</p>
         </div>
-    </section>
-    <section class="campus">
-        <div class="row">
-            <div class="campuscol">
-                <h1>WHAT IS DEPRESSION?</h1>
-                <p>Depression is a mental health disorder characterized by persistent feelings of sadness, hopelessness, and loss of interest or pleasure in activities that were once enjoyed. It can affect a person's thoughts, feelings, behavior, and physical well-being, and can interfere with their ability to function in daily life. Symptoms of depression can vary in severity and duration, and can include changes in appetite and sleep patterns, fatigue, difficulty concentrating, feelings of worthlessness or guilt, and thoughts of suicide. Depression can be caused by a variety of factors, including genetic predisposition, life events, chronic stress, and imbalances in brain chemicals called neurotransmitters. Treatment options for depression include psychotherapy, medication, and lifestyle changes such as exercise and stress reduction techniques.</p>
-            </div>
-            <div class="campuscol">
-                <img src="image/k-mitch-hodge-IqSaG9zv2e0-unsplash.jpg" >
-            </div>
+        <div class="img-btn">
+          <span class="m-up">Sign Up</span>
+          <span class="m-in">Sign In</span>
         </div>
-    </section>
-    <section class="wdd">
-        <div class="row">
-            <div class="wddcol">
-                <img src="image/wdd.jpg" alt="">
-            </div>
-            <div class="wddcol">
-                <h1>WHAT IS DEPRESSION DETECTOR?</h1>
-                <p>Depression Detector is an online tool that helps you detect the symptoms of depression, providing a quick assessment and personalized recommendations. It is an easy and accessible way to identify how you're feeling and take control of your mental health.</p>
-            </div>
-        </div>
-    </section>
-    <section class="bdd">
-        <h1>BENEFITS OF DEPRESSION DETECTOR</h1>
-        <div class="row">
-            <div class="bddcol">
-                <h3>CONVENIENT AND ACCESSIBLE</h3>
-                <p>Depression Detector can be used anytime, anywhere, and is accessible to anyone with internet access.</p>
-            </div>
-            <div class="bddcol">
-                <h3>PRIVACY AND CONFIDENTIALITY</h3>
-                <p>Your results are completely confidential and are not shared with anyone without your permission.</p>
-            </div>
-            <div class="bddcol">
-                <h3>PERSONALIZED RECOMMENDATIONS</h3>
-                <p>Based on your responses, Depression Detector provides personalized recommendations for books to read and next steps to take.</p>
-            </div>
-        </div>
-    </section>
-    <section class="cta">
-        <h1>IF YOU WANT TO KNOW MORE ABOUT THE WEBSITE <br> CLICK THE BUTTON BELOW!</h1>
-        <a href="feature.html" class="herobtn">KNOW MORE</a>
-    </section>
-    <section class="footer">
-        <h4>NOTE TO SELF</h4>
-        <p>you can't control how other people receive your energy. <br>anything you do or say, gets filtered through the lens of whatever shit they are going through. <br>which is not about you. <br>just keep doing your thing with as much integrity and love as possible.</p>
-        <div class="icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <p>Made with <i class="fa-regular fa-heart"></i> </p>
-        </div>
+      </div>
+      <div class="form sign-up">
+        <h2>Sign Up</h2>
+        <!-- <label>
+          <span>Name</span>
+          <input type="text">
+        </label> -->
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" id="suemail">
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" id="supassword">
+        </label>
+        <!-- <label>
+          <span>Confirm Password</span>
+          <input type="password">
+        </label> -->
+        <button type="button" class="submit" id="submit-btn" onclick="signUp()"><a href="home.html"></a>Sign Up Now</button>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="script1.js"></script>
 </body>
 </html>

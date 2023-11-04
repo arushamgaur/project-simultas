@@ -9,7 +9,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>sImultas</title>
+<script
+ 
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+
+  
+<script
+ 
+src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<!-- <link rel="stylesheet" href="style.css">     -->
+<title>sImultas</title>
 </head>
 <body>
     <section class="header3">
@@ -27,6 +36,7 @@
             <h2>BOOKS RECOMMENDATION</h2>
         </div>
     </section>
+    <iframe src="https://firebasestorage.googleapis.com/v0/b/my-project-id.appspot.com/o/my-pdf.pdf?alt=media" width="100%" height="600"></iframe>
     <SEction>
         <div class="books">
             <h2>ONLINE BOOKS</h2>
@@ -102,5 +112,11 @@
             <p>Made with <i class="fa-regular fa-heart"></i> </p>
         </div>
     </section>
+    <script>
+        const PDFViewer=document.getElementById('PDFViewer');
+        const pdfUrl='gs://simultas-ee3ac.appspo.com/books';
+
+        PDFViewer.src=pdfUrl;
+    </script>
 </body>
 </html>

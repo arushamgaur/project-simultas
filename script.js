@@ -23,4 +23,24 @@ function calculatePercentage(event) {
   const percentage = (selectedOptionsSum / totalOptions) * 100;
 
   resultContainer.textContent = `Mental Health Percentage: ${percentage}%`;
+
+  // Define destinations based on percentage ranges
+  let destinations = [];
+
+  if (percentage >= 70) {
+    destinations = ['music.html', 'ted.html'];
+  } else if (percentage >= 30) {
+    destinations = ['books.html', 'blogs.html'];
+  } else {
+    destinations = ['counsellor.html'];
+  }
+
+  // Randomly select a destination from the available ones
+  const randomIndex = Math.floor(Math.random() * destinations.length);
+  const nextPage = destinations[randomIndex];
+
+  // Delay the redirection to the selected page after 5 seconds (5000 milliseconds)
+  setTimeout(function () {
+    window.location.href = nextPage;
+  }, 5000);
 }

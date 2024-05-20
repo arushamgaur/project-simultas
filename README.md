@@ -7,6 +7,6 @@
 </p>
 
 <h2 align="center">Deployment Link</h2>
-<p>https://wonderful-travesseiro-c4304e.netlify.app/</p>
+<p>https://mental-health-web.netlify.app/</p>
 
 # As already mentioned to the autharity, welcome page was already desgined before the **hackout**
